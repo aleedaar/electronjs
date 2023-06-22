@@ -2,77 +2,48 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard</title>
+  <title>decision tree</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="#">
-                <h1>Create Account</h1>
-                <span>or use your email for registration</span>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <button>Sign Up</button>
-            </form>
-        </div>
-        <div class="form-container sign-in-container">
-            <form action="#">
-                <h1>Sign in</h1>
-                <span>or use your account</span>
-                <input type="email" id="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
-            </form>
-        </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button class="ghost" id="signIn">Sign In</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Enter Details for New Destination.</h1>
-                    <p>Enter title and description, then clcik Add Task button to save the record.</p>
-                    
-                    <!-- <form id="destination-form" method="post">
-                        
-                        <div class="formgroup" id="destination-title">
-                            <label for="title">Destination Title*</label>
-                            <input type="text" id="title" name="title" placeholder="Write a title here"/>
-                        </div>
-                        
-                        <div class="formgroup" id="destination-description">
-                            <label for="description">Destination Details*</label>
-                            <textarea id="description" name="description" placeholder="Write some details here"></textarea>
-                        </div>
-                        
-                          <input type="submit" class="ghost" id="signUp" value="ADD TASK" />
-                    </form> -->
-                    
-                    <br />
-                    <button type="button" class="ghost"  id="signUp">Add Task</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
+  <div class="sidebar">
+    <button class="sidebar-toggle"><i class="icon"> &#43; </i></button>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
 
   <script src="index.js"></script>
   <script>
-    const signUpButton = document.getElementById('signUp');
-    const signInButton = document.getElementById('signIn');
-    const container = document.getElementById('container');
+    var toggleBtn = document.querySelector('.sidebar-toggle');
+    var sidebar = document.querySelector('.sidebar');
 
-  signUpButton.addEventListener('click', () => {
-    container.classList.add('right-panel-active');
-});
+    toggleBtn.addEventListener('click', function() {
+        toggleBtn.classList.toggle('is-closed');
+        sidebar.classList.toggle('is-closed');
+    });
 
-signInButton.addEventListener('click', () => {
-    container.classList.remove('right-panel-active');
-});
+    // const addNewTreeButton = document.getElementById('addNewTreeButton');
+    // const saveNodeButton = document.getElementById('saveNodeButton');
+    // const container = document.getElementById('nav-toggle');
+
+    // addNewTreeButton.addEventListener('click', () => {
+    //     container.classList.add('right-panel-active');
+    // });
+
+    // saveNodeButton.addEventListener('click', () => {
+    //     container.classList.remove('right-panel-active');
+    // });
+
   </script>
 </body>
 </html>
